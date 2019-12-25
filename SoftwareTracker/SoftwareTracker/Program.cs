@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace SoftwareTracker
 {
@@ -6,7 +9,18 @@ namespace SoftwareTracker
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var links = LoadJson();
+            foreach (var item in links)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+
+        static List<string> LoadJson()
+        {
+            string json = File.ReadAllText($"{Directory.GetCurrentDirectory()}/links.json");
+            return JsonConvert.DeserializeObject<Links>(json).links;
         }
     }
 }
