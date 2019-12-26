@@ -1,8 +1,8 @@
 {
   "links": [
-    "https://github.com/kubernetes/kubernetes",
-    "https://github.com/istio/istio",
-    "https://github.com/nodejs/node",
-    "https://github.com/yarnpkg/yarn"
+    "kubernetes/kubernetes",
+    "istio/istio",
+    "nodejs/node",
+    "yarnpkg/yarn"
   ]
 }
