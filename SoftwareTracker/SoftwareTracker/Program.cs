@@ -9,11 +9,16 @@ namespace SoftwareTracker
     {
         static void Main(string[] args)
         {
-            var links = LoadJson();
+            List<string> links = LoadJson();
+
+            List<string> owners = new List<string>();
+            List<string> repos = new List<string>();
             foreach (var item in links)
             {
-                Console.WriteLine(item);
+                owners.Add(item.Split("/")[0]);
+                repos.Add(item.Split("/")[1]);
             }
+            
         }
 
 
